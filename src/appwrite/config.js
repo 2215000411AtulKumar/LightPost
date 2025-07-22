@@ -1,4 +1,4 @@
-import conf from '../conf.js';
+import conf from '../conf/conf';
 import {Client, ID, Databases, Storage, Query} from 'appwrite';
 
 export class Service{
@@ -32,7 +32,6 @@ export class Service{
     }
 
     async updatePost(slug, {title,content, featuredImage, status}) {
-        // eslint-disable-next-line no-useless-catch
         try{
             return await this.databases.updateDocument(conf.databaseId, conf.collectionId, slug, {
                 title,
