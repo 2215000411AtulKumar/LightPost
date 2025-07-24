@@ -52,7 +52,7 @@ export class AuthServices{
     async logout() {
         // eslint-disable-next-line no-useless-catch
         try {
-          const session = await this.account.deleteSessions();
+        const session = await this.account.deleteSessions();
             return session;
         } catch (error) {
             throw error;
@@ -61,4 +61,4 @@ export class AuthServices{
 
 }    
 const authServices = new AuthServices();
-export { authServices };
+export default authServices;
